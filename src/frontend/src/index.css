@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Danish Clothing — warm Nordic minimalism */
+    --background: 0.98 0.003 80;
+    --foreground: 0.18 0.01 60;
+
+    --card: 0.97 0.004 75;
+    --card-foreground: 0.18 0.01 60;
+
+    --popover: 0.99 0.002 75;
+    --popover-foreground: 0.18 0.01 60;
+
+    /* Warm charcoal for primary actions */
+    --primary: 0.22 0.015 55;
+    --primary-foreground: 0.97 0.003 80;
+
+    /* Stone/linen secondary */
+    --secondary: 0.92 0.012 80;
+    --secondary-foreground: 0.25 0.015 60;
+
+    --muted: 0.93 0.008 75;
+    --muted-foreground: 0.52 0.018 65;
+
+    /* Dusty rose accent */
+    --accent: 0.88 0.04 15;
+    --accent-foreground: 0.18 0.01 60;
+
+    --destructive: 0.58 0.22 25;
+    --destructive-foreground: 0.98 0.003 80;
+
+    --border: 0.88 0.012 72;
+    --input: 0.88 0.012 72;
+    --ring: 0.22 0.015 55;
+
+    --radius: 0.25rem;
+
+    --chart-1: 0.65 0.12 35;
+    --chart-2: 0.6 0.08 160;
+    --chart-3: 0.55 0.1 60;
+    --chart-4: 0.7 0.09 20;
+    --chart-5: 0.75 0.06 200;
+
+    --sidebar: 0.96 0.005 75;
+    --sidebar-foreground: 0.18 0.01 60;
+    --sidebar-primary: 0.22 0.015 55;
+    --sidebar-primary-foreground: 0.97 0.003 80;
+    --sidebar-accent: 0.92 0.012 80;
+    --sidebar-accent-foreground: 0.25 0.015 60;
+    --sidebar-border: 0.88 0.012 72;
+    --sidebar-ring: 0.22 0.015 55;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: "General Sans", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  .font-sans {
+    font-family: "General Sans", ui-sans-serif, system-ui, sans-serif;
+  }
+}
